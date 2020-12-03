@@ -4,40 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:backgroundTint="#FFFFFF"
+    android:visibility="visible"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/title1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="336dp"
-        android:text="Bienvenido"
-        android:textColor="#000000"
-        android:textAlignment="center"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="@+id/pelota"
-        app:layout_constraintTop_toTopOf="@+id/ball"
-        app:layout_constraintVertical_bias="0.946"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp" />
 
     <ImageView
         android:id="@+id/ball"
-        android:scaleType="fitXY"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:scaleType="fitXY"
         android:src="@drawable/ic_liquid_cheese"
 
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pelota"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/pelota"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         android:layout_gravity="center|left"
-        android:src="@drawable/ic_medicine_ball"
+        android:src="@drawable/ic_leaf_33"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ball"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="336dp"
+        android:text="Bienvenido"
+        android:textAlignment="center"
+        android:textColor="#4C4B4B"
+        android:textSize="30dp"
+
+
+        app:layout_constraintBottom_toBottomOf="@+id/pelota"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ball"
+        app:layout_constraintVertical_bias="0.484"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="130dp"
+        android:layout_height="68dp"
+        android:background="@drawable/rounded_button_settings"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:backgroundTint="#33C51A"
+        android:text="@string/iniciar"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ball"
+        app:layout_constraintVertical_bias="0.786"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
